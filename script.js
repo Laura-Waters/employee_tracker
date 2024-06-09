@@ -1,13 +1,14 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
+let employeesArray = []; 
+
 const collectEmployees = function () {
   let newEmployee = true;
 
   while (newEmployee) {
 
     let firstName = prompt('Enter first name');
-    console.log('getting first name');
 
     if (firstName === '') {
       alert('Please enter first name');
@@ -15,7 +16,6 @@ const collectEmployees = function () {
     }
 
     let lastName = prompt('Enter last name');
-    console.log('getting last name');
 
     if (lastName === '') {
       alert('Please enter last name');
@@ -23,7 +23,6 @@ const collectEmployees = function () {
     }
 
     let salary = prompt('Enter salary');
-    console.log('getting salary'); 
 
     if (salary === '') {
       alert('Please enter salary');
@@ -31,23 +30,37 @@ const collectEmployees = function () {
     }
 
     if (isNaN(salary)) {
-      salary =0;
+      salary = 0;
     }
 
-    console.log([firstName, lastName, parseInt(salary)]);
+    const employee = {
+      first: firstName,
+      last: lastName,
+      salary: parseInt(salary), 
+    }; 
+
+    employeesArray.push(employee); 
 
     newEmployee = window.confirm("Add Another?");
 
     if (newEmployee === false) {
-      return [firstName, lastName, parseInt(salary)]; 
+      return employeesArray; 
     }
-    
+
   }
-}
+}; 
 
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
+  // let sum = 0;
+    for (let i=0; i < employeesArray.length; i++) {
+      // sum += salaryArray[i(salary.value)]
+    }
+    
+  //   const average = (sum / employeesArray.length);
+  //   console.log(average); 
+
   // TODO: Calculate and display the average salary
 //   const salaryArray = document.array[2];  
 
@@ -56,8 +69,7 @@ const displayAverageSalary = function(employeesArray) {
 //     sum += salaryArray[i]; 
 //   }
 
-//   console.log(sum / salaryArray.length); 
-}
+} 
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
