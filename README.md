@@ -1,5 +1,5 @@
 # Employee Tracker
-https://github.com/Laura-Waters/module4_challenge
+https://github.com/Laura-Waters/employee_tracker
 
 ## Description
 
