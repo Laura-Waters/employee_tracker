@@ -34,8 +34,8 @@ const collectEmployees = function () {
     }
 
     const employee = {
-      first: firstName,
-      last: lastName,
+      firstName: firstName,
+      lastName: lastName,
       salary: parseInt(salary), 
     }; 
 
@@ -53,27 +53,37 @@ const collectEmployees = function () {
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  // let sum = 0;
-    for (let i=0; i < employeesArray.length; i++) {
-      // sum += salaryArray[i(salary.value)]
-    }
+//   // currentEmployee = employeesArray[i];
+//   // console.log(currentEmployee);
+//   // const employeeSalaries = employeesArray.filter(value === num);
+//   // console.log(employeeSalaries); 
+
+//   // let sum = 0;
+//   //   for (let i=0; i < employeesArray.length; i++) {
+//   //     sum += employeesArray[i];
+//   //     console.log(sum); 
+//   //   }
     
-  //   const average = (sum / employeesArray.length);
-  //   console.log(average); 
+//   //   const average = (sum / employeesArray.length);
+//   //   console.log(average); 
 
-  // TODO: Calculate and display the average salary
-//   const salaryArray = document.array[2];  
+//   // TODO: Calculate and display the average salary
+// //   const salaryArray = document.array[2];  
 
-//   let sum = 0;
-//   for (let i=0; i < salaryArray.length; i++) {
-//     sum += salaryArray[i]; 
-//   }
+// //   let sum = 0;
+// //   for (let i=0; i < salaryArray.length; i++) {
+// //     sum += salaryArray[i]; 
+// //   }
 
 } 
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
+//   // TODO: Select and display a random employee
+//   const randomEmployee = Math.floor(Math.random() * employeesArray.length);
+//   console.log(randomEmployee); 
+//   console.log(`Congratulations to our random drawing winner, ${randomEmployee.firstName} ${randomEmployee.lastName} !`)
+
 }
 
 /*
