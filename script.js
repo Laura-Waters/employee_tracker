@@ -50,30 +50,30 @@ const collectEmployees = function () {
   }
 }; 
 
+let salaryArray = []; 
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-//   // currentEmployee = employeesArray[i];
-//   // console.log(currentEmployee);
-//   // const employeeSalaries = employeesArray.filter(value === num);
-//   // console.log(employeeSalaries); 
 
-//   // let sum = 0;
-//   //   for (let i=0; i < employeesArray.length; i++) {
-//   //     sum += employeesArray[i];
-//   //     console.log(sum); 
-//   //   }
-    
-//   //   const average = (sum / employeesArray.length);
-//   //   console.log(average); 
+  for (let i=0; i < employeesArray.length; i++) {
+    const currentEmployee = employeesArray[i];
+    const currentEmployeeSalary = currentEmployee.salary; 
+    salaryArray.push(currentEmployeeSalary);
+  }
 
-//   // TODO: Calculate and display the average salary
-// //   const salaryArray = document.array[2];  
+  let sum = 0;
+  for (let i=0; i < salaryArray.length; i++) {
+    sum += salaryArray[i];
+  }
 
-// //   let sum = 0;
-// //   for (let i=0; i < salaryArray.length; i++) {
-// //     sum += salaryArray[i]; 
-// //   }
+  const average = parseInt(sum / salaryArray.length); 
+  const averageDisplay = average.toLocaleString("en-US",{
+    style:"currency",
+    currency:"USD"
+  }); 
+
+  console.log(`The average salary between our ${salaryArray.length} employees is ${averageDisplay}.`)
+  return average; 
 
 } 
 
