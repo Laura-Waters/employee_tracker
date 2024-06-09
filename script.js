@@ -80,10 +80,9 @@ const displayAverageSalary = function(employeesArray) {
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
 //   // TODO: Select and display a random employee
-//   const randomEmployee = Math.floor(Math.random() * employeesArray.length);
-//   console.log(randomEmployee); 
-//   console.log(`Congratulations to our random drawing winner, ${randomEmployee.firstName} ${randomEmployee.lastName} !`)
-
+  randomEmployee = Math.floor(Math.random() * employeesArray.length);
+  chosenEmployee = (employeesArray[randomEmployee]); 
+  console.log(`Congratulations to our random drawing winner, ${chosenEmployee.firstName} ${chosenEmployee.lastName}!`);
 }
 
 /*
